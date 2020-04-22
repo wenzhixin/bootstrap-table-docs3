@@ -153,8 +153,7 @@
   margin: 0!important;
 }
 </style>
-<div id="codefund"><!-- fallback content --></div>
-<script src="https://codefund.io/properties/292/funder.js" async="async"></script>
+<div id="gg"></div>
 
           </div>
         </div>
@@ -208,18 +207,13 @@
              data-hs="h1,h2"
              data-smart-id="true"
              data-bottom=".bs-docs-footer">
-          <h1>Table options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/table-options.md"></a></h1>
+          <h1 id="table-options-">Table options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/table-options.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>The table options are defined in <code>jQuery.fn.bootstrapTable.defaults</code>.</p>
+<p>The table options are defined in <code class="highlighter-rouge">jQuery.fn.bootstrapTable.defaults</code>.</p>
 
-<table class="table"
-  id="t"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="t" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Name</th>
@@ -319,7 +313,7 @@
     <td>data-icon-size</td>
     <td>String</td>
     <td>undefined</td>
-    <td>Defines icon size: <ul><li>undefined => btn</li><li>xs => btn-xs</li><li>sm => btn-sm</li><li>lg => btn-lg</li></ul>
+    <td>Defines icon size: <ul><li>undefined =&gt; btn</li><li>xs =&gt; btn-xs</li><li>sm =&gt; btn-sm</li><li>lg =&gt; btn-lg</li></ul>
     </td>
   </tr>
   <tr>
@@ -333,14 +327,14 @@
     <td>icons</td>
     <td>data-icons</td>
     <td>Object</td>
-    <td>{<br/>
-    &nbsp;&nbsp;<i>paginationSwitchDown:</i> 'glyphicon-collapse-down icon-chevron-down',<br/>
-    &nbsp;&nbsp;<i>paginationSwitchUp:</i> 'glyphicon-collapse-up icon-chevron-up',<br/>
-    &nbsp;&nbsp;<i>refresh:</i> 'glyphicon-refresh icon-refresh',<br/>
-    &nbsp;&nbsp;<i>toggle:</i> 'glyphicon-list-alt icon-list-alt',<br/>
-    &nbsp;&nbsp;<i>columns:</i> 'glyphicon-th icon-th',<br/>
-    &nbsp;&nbsp;<i>detailOpen:</i> 'glyphicon-plus icon-plus',<br/>
-    &nbsp;&nbsp;<i>detailClose:</i> 'glyphicon-minus icon-minus'<br/>
+    <td>{<br />
+    &nbsp;&nbsp;<i>paginationSwitchDown:</i> 'glyphicon-collapse-down icon-chevron-down',<br />
+    &nbsp;&nbsp;<i>paginationSwitchUp:</i> 'glyphicon-collapse-up icon-chevron-up',<br />
+    &nbsp;&nbsp;<i>refresh:</i> 'glyphicon-refresh icon-refresh',<br />
+    &nbsp;&nbsp;<i>toggle:</i> 'glyphicon-list-alt icon-list-alt',<br />
+    &nbsp;&nbsp;<i>columns:</i> 'glyphicon-th icon-th',<br />
+    &nbsp;&nbsp;<i>detailOpen:</i> 'glyphicon-plus icon-plus',<br />
+    &nbsp;&nbsp;<i>detailClose:</i> 'glyphicon-minus icon-minus'<br />
     }
     </td>
     <td>Defines icons used in the toolbar, pagination, and details view.</td>
@@ -395,7 +389,7 @@
     <td>undefined</td>
     <td>
       A URL to request data from remote site.
-      <br/>Note that the required server response format is different depending on whether the 'sidePagination'
+      <br />Note that the required server response format is different depending on whether the 'sidePagination'
       option is specified. See the following examples:
       <ul>
         <li><a href="https://github.com/wenzhixin/bootstrap-table-examples/blob/master/json/data1.json">Without server-side pagination</a></li>
@@ -435,13 +429,13 @@
     <td>queryParams</td>
     <td>data-query-params</td>
     <td>Function</td>
-    <td>function(params) {<br>return params;<br>}</td>
+    <td>function(params) {<br />return params;<br />}</td>
     <td>
     When requesting remote data, you can send additional parameters by modifying queryParams.
-    If queryParamsType = 'limit', the params object contains: <br>
+    If queryParamsType = 'limit', the params object contains: <br />
     limit, offset, search, sort, order
-    Else, it contains: <br>
-    pageSize, pageNumber, searchText, sortName, sortOrder. <br>
+    Else, it contains: <br />
+    pageSize, pageNumber, searchText, sortName, sortOrder. <br />
     Return false to stop request.
     </td>
   </tr>
@@ -456,9 +450,9 @@
     <td>responseHandler</td>
     <td>data-response-handler</td>
     <td>Function</td>
-    <td>function(res) {<br>return res;<br>}</td>
+    <td>function(res) {<br />return res;<br />}</td>
     <td>
-    Before load remote data, handler the response data format, the parameters object contains: <br>
+    Before load remote data, handler the response data format, the parameters object contains: <br />
     res: the response data.
     </td>
   </tr>
@@ -491,7 +485,7 @@
     <td>
       Defines the side pagination of the table, can only be 'client' or 'server'.
       Using 'server' side requires either setting the 'url' or 'ajax' option.
-      <br/>Note that the required server response format is different depending on whether the 'client' or 'server' option is specified. See the following examples:
+      <br />Note that the required server response format is different depending on whether the 'client' or 'server' option is specified. See the following examples:
       <ul>
         <li><a href="https://github.com/wenzhixin/bootstrap-table-examples/blob/master/json/data1.json">Without server-side pagination</a></li>
         <li><a href="https://github.com/wenzhixin/bootstrap-table-examples/blob/master/json/data2.json">With server-side pagination</a></li>
@@ -539,7 +533,7 @@
     <td>Boolean</td>
     <td>false</td>
     <td>Escapes a string for insertion into HTML,
-    replacing <code>&</code>, <code><</code>, <code>></code>,
+    replacing <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>,
     <code>"</code>, <code>`</code>, and <code>'</code> characters.</td>
   </tr>
   <tr>
@@ -583,7 +577,7 @@
     <td>Boolean</td>
     <td>true</td>
     <td>True to trim spaces in search field.</td>
-  </tr
+  &lt;/tr
   <tr>
     <td>showHeader</td>
     <td>data-show-header</td>
@@ -674,14 +668,14 @@
     <td>detailFormatter</td>
     <td>data-detail-formatter</td>
     <td>Function</td>
-    <td>function(index, row, element) {<br>return '';<br>}</td>
+    <td>function(index, row, element) {<br />return '';<br />}</td>
     <td>Format your detail view when <code>detailView</code> is set to <code>true</code>. Return a String and it will be appended into the detail view cell, optionally render the element directly using the third parameter which is a jQuery element of the target cell.</td>
   </tr>
   <tr>
     <td>detailFilter</td>
     <td>data-detail-filter</td>
     <td>Function</td>
-    <td>function(index, row) {<br>return true;<br>}</td>
+    <td>function(index, row) {<br />return true;<br />}</td>
     <td>Enable expansion per row when <code>detailView</code> is set to <code>true</code>. Return <code>true</code> and the row will be enabled for expansion, return <code>false</code> and expansion for the row will be disabled. Default function returns <code>true</code> to enable expansion for all rows.</td>
   </tr>
   <tr>
@@ -774,8 +768,8 @@
     <td>Function</td>
     <td><code>{ return $.inArray(element.tagName, ['A', 'BUTTON']); }</code></td>
     <td>
-    Takes one parameters:<br>
-    element: the element clicked on.<br>
+    Takes one parameters:<br />
+    element: the element clicked on.<br />
     Return true if the click should be ignored, false if the click should cause the row to be selected. This option is only relevant if clickToSelect is true.
     </td>
   </tr>
@@ -792,7 +786,7 @@
     <td>String | Node</td>
     <td>undefined</td>
     <td>
-    A jQuery selector that indicates the toolbar, for example:<br>
+    A jQuery selector that indicates the toolbar, for example:<br />
     #toolbar, .toolbar, or a DOM node.
     </td>
   </tr>
@@ -802,7 +796,7 @@
     <td>String | Node</td>
     <td>undefined</td>
     <td>
-    A jQuery selector that indicates the buttons toolbar, for example:<br>
+    A jQuery selector that indicates the buttons toolbar, for example:<br />
     #buttons-toolbar, .buttons-toolbar, or a DOM node.
     </td>
   </tr>
@@ -840,10 +834,10 @@
     <td>Function</td>
     <td>{}</td>
     <td>
-    The row style formatter function, takes two parameters: <br>
-    row: the row record data.<br>
-    index: the row index.<br>
-    Support classes or css. Example usage:<br>
+    The row style formatter function, takes two parameters: <br />
+    row: the row record data.<br />
+    index: the row index.<br />
+    Support classes or css. Example usage:<br />
 <pre>
 function rowStyle(row, index) {
   return {
@@ -860,9 +854,9 @@ function rowStyle(row, index) {
     <td>Function</td>
     <td>{}</td>
     <td>
-    The row attribute formatter function, takes two parameters: <br>
-    row: the row record data.<br>
-    index: the row index.<br>
+    The row attribute formatter function, takes two parameters: <br />
+    row: the row record data.<br />
+    index: the row index.<br />
     Support all custom attributes.
     </td>
   </tr>
@@ -872,9 +866,9 @@ function rowStyle(row, index) {
     <td>Function</td>
     <td>$.noop</td>
     <td>
-    The custom search function is executed instead of built-in search function, takes one parameters: <br>
-    text: the search text.<br>
-    Example usage:<br>
+    The custom search function is executed instead of built-in search function, takes one parameters: <br />
+    text: the search text.<br />
+    Example usage:<br />
     <pre>
     function customSearch(text) {
       //Search logic here.
@@ -889,10 +883,10 @@ function rowStyle(row, index) {
     <td>Function</td>
     <td>$.noop</td>
     <td>
-    The custom sort function is executed instead of built-in sort function, takes two parameters: <br>
-    sortName: the sort name.<br>
-    sortOrder: the sort order.<br>
-    Example usage:<br>
+    The custom sort function is executed instead of built-in sort function, takes two parameters: <br />
+    sortName: the sort name.<br />
+    sortOrder: the sort order.<br />
+    Example usage:<br />
     <pre>
     function customSort(sortName, sortOrder) {
       //Sort logic here.
@@ -908,7 +902,7 @@ function rowStyle(row, index) {
     <td>undefined</td>
     <td>
     Sets the locale to use (i.e. <code>'fr-CA'</code>). Locale files must be pre-loaded.
-    Allows for fallback locales, if loaded, in the following order:<br>
+    Allows for fallback locales, if loaded, in the following order:<br />
     <ol>
     <li>First tries for the locale as specified,</li>
     <li>Then tries the locale with <code>'_'</code> translated to
@@ -926,10 +920,10 @@ function rowStyle(row, index) {
   <td>Function</td>
   <td>{}</td>
   <td>
-      The footer style formatter function, takes two parameters: <br>
-      row: the row record data.<br>
-      index: the row index.<br>
-      Support classes or css. Example usage:<br>
+      The footer style formatter function, takes two parameters: <br />
+      row: the row record data.<br />
+      index: the row index.<br />
+      Support classes or css. Example usage:<br />
     <pre>
     function footerStyle(value, row, index) {
       return {
@@ -939,21 +933,17 @@ function rowStyle(row, index) {
     </pre>
   </td>
   </tr>
-   </tbody>
-</table>
+   &lt;/tbody&gt;
+&lt;/table&gt;
+</tr></tbody></table>
 
-<h1>Column options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/column-options.md"></a></h1>
+<h1 id="column-options-">Column options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/column-options.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>The column options is defined in <code>jQuery.fn.bootstrapTable.columnDefaults</code>.</p>
+<p>The column options is defined in <code class="highlighter-rouge">jQuery.fn.bootstrapTable.columnDefaults</code>.</p>
 
-<table class="table"
-  id="c"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="c" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Name</th>
@@ -1084,7 +1074,7 @@ function rowStyle(row, index) {
     <td>true</td>
     <td>False to hide the columns item in card view state.</td>
   </tr>
-    <tr>
+	<tr>
     <td>switchable</td>
     <td>data-switchable</td>
     <td>Boolean</td>
@@ -1104,13 +1094,13 @@ function rowStyle(row, index) {
     <td>Function</td>
     <td>undefined</td>
     <td>
-    The context (this) is the column Object. <br>
-    The cell formatter function, take three parameters: <br>
-    value: the field value. <br>
-    row: the row record data.<br>
-    index: the row index.<br>
-    field: the row field.<br>
-    Example usage:<br>
+    The context (this) is the column Object. <br />
+    The cell formatter function, take three parameters: <br />
+    value: the field value. <br />
+    row: the row record data.<br />
+    index: the row index.<br />
+    field: the row field.<br />
+    Example usage:<br />
 <pre>
 function formatter(value, row, index, field) {
   if (value === 'foo') {
@@ -1127,22 +1117,22 @@ function formatter(value, row, index, field) {
     <td>Function</td>
     <td>undefined</td>
     <td>
-    The context (this) is the column Object. <br>
-    The function, take one parameter: <br>
-    data: Array of all the  data rows. <br>
+    The context (this) is the column Object. <br />
+    The function, take one parameter: <br />
+    data: Array of all the  data rows. <br />
     the function should return a string with the text to show in the footer cell.
-  </tr>
+  &lt;/tr&gt;
   <tr>
     <td>events</td>
     <td>data-events</td>
     <td>Object</td>
     <td>undefined</td>
     <td>
-    The cell events listener when you use formatter function, take four parameters: <br>
-    event: the jQuery event. <br>
-    value: the field value. <br>
-    row: the row record data.<br>
-    index: the row index. <br>
+    The cell events listener when you use formatter function, take four parameters: <br />
+    event: the jQuery event. <br />
+    value: the field value. <br />
+    row: the row record data.<br />
+    index: the row index. <br />
     Example code:
     <code>&lt;th .. data-events="operateEvent"&gt;</code>
     <code>var operateEvents = {'click .like': function (e, value, row, index) {}};</code>
@@ -1154,10 +1144,10 @@ function formatter(value, row, index, field) {
     <td>Function</td>
     <td>undefined</td>
     <td>
-    The custom field sort function that used to do local sorting, take two parameters: <br>
-    a: the first field value.<br>
-    b: the second field value.<br>
-    rowA: the first row.<br>
+    The custom field sort function that used to do local sorting, take two parameters: <br />
+    a: the first field value.<br />
+    b: the second field value.<br />
+    rowA: the first row.<br />
     rowB: the second row.
     </td>
   </tr>
@@ -1177,12 +1167,12 @@ function formatter(value, row, index, field) {
     <td>Function</td>
     <td>undefined</td>
     <td>
-    The cell style formatter function, take three parameters: <br>
-    value: the field value.<br>
-    row: the row record data.<br>
-    index: the row index.<br>
-    field: the row field.<br>
-    Support classes or css. Example usage:<br>
+    The cell style formatter function, take three parameters: <br />
+    value: the field value.<br />
+    row: the row record data.<br />
+    index: the row index.<br />
+    field: the row field.<br />
+    Support classes or css. Example usage:<br />
 <pre>
 function cellStyle(value, row, index, field) {
   return {
@@ -1217,7 +1207,7 @@ function cellStyle(value, row, index, field) {
     <td>Boolean</td>
     <td>false</td>
     <td>
-    Escapes a string for insertion into HTML, replacing &, <, >, ", \`, and ' characters.
+    Escapes a string for insertion into HTML, replacing &amp;, &lt;, &gt;, ", \`, and ' characters.
     </td>
   </tr>
   <tr>
@@ -1229,32 +1219,28 @@ function cellStyle(value, row, index, field) {
     True to show the title of column with 'radio' or 'singleSelect' 'checkbox' option.
     </td>
   </tr>
-</tbody>
-</table>
+&lt;/tbody&gt;
+&lt;/table&gt;
+</td></tr></tbody></table>
 
-<h1>Events <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/events.md"></a></h1>
+<h1 id="events-">Events <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/events.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
 <p>To use event syntax:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#table'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">({</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#table</span><span class="dl">'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">({</span>
   <span class="na">onEventName</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
     <span class="c1">// ...</span>
   <span class="p">}</span>
 <span class="p">})</span>
 
-<span class="nx">$</span><span class="p">(</span><span class="s1">'#table'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'event-name.bs.table'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#table</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">event-name.bs.table</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
   <span class="c1">// ...</span>
 <span class="p">})</span>
-</code></pre></div>
+</code></pre></div></div>
 
-<table class="table"
-  id="e"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="e" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Option Event</th>
@@ -1269,8 +1255,8 @@ function cellStyle(value, row, index, field) {
     <td>all.bs.table</td>
     <td>name, args</td>
     <td>
-    Fires when all events trigger, the parameters contain: <br>
-    name: the event name, <br>
+    Fires when all events trigger, the parameters contain: <br />
+    name: the event name, <br />
     args: the event data.
     </td>
   </tr>
@@ -1279,9 +1265,9 @@ function cellStyle(value, row, index, field) {
     <td>click-row.bs.table</td>
     <td>row, $element, field</td>
     <td>
-    Fires when user click a row, the parameters contain: <br>
-    row: the record corresponding to the clicked row, <br>
-    $element: the tr element, <br>
+    Fires when user click a row, the parameters contain: <br />
+    row: the record corresponding to the clicked row, <br />
+    $element: the tr element, <br />
     field: the field name corresponding to the clicked cell.
     </td>
   </tr>
@@ -1290,9 +1276,9 @@ function cellStyle(value, row, index, field) {
     <td>dbl-click-row.bs.table</td>
     <td>row, $element, field</td>
     <td>
-    Fires when user double click a row, the parameters contain: <br>
-    row: the record corresponding to the clicked row, <br>
-    $element: the tr element, <br>
+    Fires when user double click a row, the parameters contain: <br />
+    row: the record corresponding to the clicked row, <br />
+    $element: the tr element, <br />
     field: the field name corresponding to the clicked cell.
     </td>
   </tr>
@@ -1301,10 +1287,10 @@ function cellStyle(value, row, index, field) {
     <td>click-cell.bs.table</td>
     <td>field, value, row, $element</td>
     <td>
-    Fires when user click a cell, the parameters contain: <br>
-    field: the field name corresponding to the clicked cell, <br>
-    value: the data value corresponding to the clicked cell, <br>
-    row: the record corresponding to the clicked row, <br>
+    Fires when user click a cell, the parameters contain: <br />
+    field: the field name corresponding to the clicked cell, <br />
+    value: the data value corresponding to the clicked cell, <br />
+    row: the record corresponding to the clicked row, <br />
     $element: the td element.
     </td>
   </tr>
@@ -1313,10 +1299,10 @@ function cellStyle(value, row, index, field) {
     <td>dbl-click-cell.bs.table</td>
     <td>field, value, row, $element</td>
     <td>
-    Fires when user double click a cell, the parameters contain: <br>
-    field: the field name corresponding to the clicked cell, <br>
-    value: the data value corresponding to the clicked cell, <br>
-    row: the record corresponding to the clicked row, <br>
+    Fires when user double click a cell, the parameters contain: <br />
+    field: the field name corresponding to the clicked cell, <br />
+    value: the data value corresponding to the clicked cell, <br />
+    row: the record corresponding to the clicked row, <br />
     $element: the td element.
     </td>
   </tr>
@@ -1325,8 +1311,8 @@ function cellStyle(value, row, index, field) {
     <td>sort.bs.table</td>
     <td>name, order</td>
     <td>
-    Fires when user sort a column, the parameters contain: <br>
-    name: the sort column field name<br>
+    Fires when user sort a column, the parameters contain: <br />
+    name: the sort column field name<br />
     order: the sort column order.
     </td>
   </tr>
@@ -1335,7 +1321,7 @@ function cellStyle(value, row, index, field) {
     <td>check.bs.table</td>
     <td>row, $element</td>
     <td>
-    Fires when user check a row, the parameters contain: <br>
+    Fires when user check a row, the parameters contain: <br />
     row: the record corresponding to the clicked row.
     $element: the DOM element checked.
     </td>
@@ -1345,7 +1331,7 @@ function cellStyle(value, row, index, field) {
     <td>uncheck.bs.table</td>
     <td>row, $element</td>
     <td>
-    Fires when user uncheck a row, the parameters contain: <br>
+    Fires when user uncheck a row, the parameters contain: <br />
     row: the record corresponding to the clicked row.
     $element: the DOM element unchecked.
     </td>
@@ -1355,7 +1341,7 @@ function cellStyle(value, row, index, field) {
     <td>check-all.bs.table</td>
     <td>rows</td>
     <td>
-    Fires when user check all rows, the parameters contain: <br>
+    Fires when user check all rows, the parameters contain: <br />
     rows: array of records corresponding to newly checked rows.
     </td>
   </tr>
@@ -1364,7 +1350,7 @@ function cellStyle(value, row, index, field) {
     <td>uncheck-all.bs.table</td>
     <td>rows</td>
     <td>
-    Fires when user uncheck all rows, the parameters contain: <br>
+    Fires when user uncheck all rows, the parameters contain: <br />
     rows: array of records corresponding to previously checked rows.
     </td>
   </tr>
@@ -1373,7 +1359,7 @@ function cellStyle(value, row, index, field) {
     <td>check-some.bs.table</td>
     <td>rows</td>
     <td>
-    Fires when user check some rows, the parameters contain: <br>
+    Fires when user check some rows, the parameters contain: <br />
     rows: array of records corresponding to newly checked rows.
     </td>
   </tr>
@@ -1382,7 +1368,7 @@ function cellStyle(value, row, index, field) {
     <td>uncheck-some.bs.table</td>
     <td>rows</td>
     <td>
-    Fires when user uncheck some rows, the parameters contain: <br>
+    Fires when user uncheck some rows, the parameters contain: <br />
     rows: array of records corresponding to previously checked rows.
     </td>
   </tr>
@@ -1487,26 +1473,19 @@ function cellStyle(value, row, index, field) {
   </tbody>
 </table>
 
-<h1>Methods <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/methods.md"></a></h1>
+<h1 id="methods-">Methods <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/methods.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>The calling method syntax: <code>$(&#39;#table&#39;).bootstrapTable(&#39;method&#39;, parameter)</code>.</p>
+<p>The calling method syntax: <code class="highlighter-rouge">$('#table').bootstrapTable('method', parameter)</code>.</p>
 
-<table class="table"
-  id="m"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="m" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Name</th>
     <th>Parameter</th>
     <th>Description</th>
-    <th data-formatter="methodFormatter"
-      data-align="center"
-      data-valign="middle">Example</th>
+    <th data-formatter="methodFormatter" data-align="center" data-valign="middle">Example</th>
   </tr>
   </thead>
   <tbody>
@@ -1574,8 +1553,8 @@ function cellStyle(value, row, index, field) {
     <td>remove</td>
     <td>params</td>
     <td>
-    Remove data from table, the params contains two properties: <br>
-    field: the field name of remove rows. <br>
+    Remove data from table, the params contains two properties: <br />
+    field: the field name of remove rows. <br />
     values: the array of values for rows which should be removed.
     </td>
     <td>remove</td>
@@ -1600,8 +1579,8 @@ function cellStyle(value, row, index, field) {
     <td>insertRow</td>
     <td>params</td>
     <td>
-    Insert a new row, the param contains following properties:<br>
-    index: the row index to insert into.<br>
+    Insert a new row, the param contains following properties:<br />
+    index: the row index to insert into.<br />
     row: the row data.
     </td>
   </tr>
@@ -1609,8 +1588,8 @@ function cellStyle(value, row, index, field) {
     <td>updateRow</td>
     <td>params</td>
     <td>
-    Update the specified row(s), each param contains following properties: <br>
-    index: the row index to be updated. <br>
+    Update the specified row(s), each param contains following properties: <br />
+    index: the row index to be updated. <br />
     row: the new row data.
     </td>
   </tr>
@@ -1618,8 +1597,8 @@ function cellStyle(value, row, index, field) {
     <td>updateByUniqueId</td>
     <td>params</td>
     <td>
-    Update the specified row(s), each param contains following properties: <br>
-    id: a row id where the id should be the uniqueid field assigned to the table. <br>
+    Update the specified row(s), each param contains following properties: <br />
+    id: a row id where the id should be the uniqueid field assigned to the table. <br />
     row: the new row data.
     </td>
   </tr>
@@ -1647,10 +1626,10 @@ function cellStyle(value, row, index, field) {
     <td>mergeCells</td>
     <td>options</td>
     <td>
-    Merge some cells to one cell, the options contains following properties: <br>
-    index: the row index. <br>
-    field: the field name.<br>
-    rowspan: the rowspan count to be merged. <br>
+    Merge some cells to one cell, the options contains following properties: <br />
+    index: the row index. <br />
+    field: the field name.<br />
+    rowspan: the rowspan count to be merged. <br />
     colspan: the colspan count to be merged.
     </td>
   </tr>
@@ -1658,11 +1637,11 @@ function cellStyle(value, row, index, field) {
     <td>updateCell</td>
     <td>params</td>
     <td>
-    Update one cell, the params contains following properties: <br>
-    index: the row index. <br>
-    field: the field name.<br>
+    Update one cell, the params contains following properties: <br />
+    index: the row index. <br />
+    field: the field name.<br />
     value: the new field value.
-    <br>
+    <br />
     To disable table re-initialization you can set <code>{reinit: false}</code>
     </td>
   </tr>
@@ -1720,10 +1699,10 @@ function cellStyle(value, row, index, field) {
     <td>checkBy</td>
     <td>params</td>
     <td>
-    Check a row by array of values, the params contains:<br>
-    field: name of the field used to find records<br>
-    values: array of values for rows to check<br>
-    Example: <br>
+    Check a row by array of values, the params contains:<br />
+    field: name of the field used to find records<br />
+    values: array of values for rows to check<br />
+    Example: <br />
     $("#table").bootstrapTable("checkBy", {field:"field_name", values:["value1","value2","value3"]})
     </td>
   </tr>
@@ -1731,10 +1710,10 @@ function cellStyle(value, row, index, field) {
     <td>uncheckBy</td>
     <td>params</td>
     <td>
-    Uncheck a row by array of values, the params contains:<br>
-    field: name of the field used to find records<br>
-    values: array of values for rows to uncheck<br>
-    Example: <br>
+    Uncheck a row by array of values, the params contains:<br />
+    field: name of the field used to find records<br />
+    values: array of values for rows to uncheck<br />
+    Example: <br />
     $("#table").bootstrapTable("uncheckBy", {field:"field_name", values:["value1","value2","value3"]})
     </td>
   </tr>
@@ -1786,8 +1765,8 @@ function cellStyle(value, row, index, field) {
   <tr>
     <td>filterBy</td>
     <td>params</td>
-    <td>(Can use only in client-side) Filter data in table, e.g. you can filter <code>{age: 10}</code> to show the data only age is equal to 10.  You can also filter with an array of values, as in: <code>{age: 10, hairColor: ["blue", "red", "green"]} to find data where age is equal to 10 and hairColor is either blue, red, or green.</td>
-  </tr>
+    <td>(Can use only in client-side) Filter data in table, e.g. you can filter <code>{age: 10}</code> to show the data only age is equal to 10.  You can also filter with an array of values, as in: <code>{age: 10, hairColor: ["blue", "red", "green"]} to find data where age is equal to 10 and hairColor is either blue, red, or green.&lt;/td&gt;
+  &lt;/tr&gt;
   <tr>
     <td>selectPage</td>
     <td>page</td>
@@ -1837,25 +1816,21 @@ function cellStyle(value, row, index, field) {
     <td>updateCellById</td>
     <td>params</td>
     <td>
-    update the cell specified by the id, each param contains following properties: <br>
-    id: row id where the id should be the uniqueid field assigned to the table. <br>
-    field: field name of the cell to be updated.<br>
+    update the cell specified by the id, each param contains following properties: <br />
+    id: row id where the id should be the uniqueid field assigned to the table. <br />
+    field: field name of the cell to be updated.<br />
     value: new value of the cell.
     </td>
   </tr>
-  </tbody>
-</table>
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></td></tr></tbody></table>
 
-<h1>Localizations <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/localizations.md"></a></h1>
+<h1 id="localizations-">Localizations <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/en/documentation/localizations.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<table class="table"
-  id="l"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="l" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Name</th>
@@ -1919,37 +1894,37 @@ function cellStyle(value, row, index, field) {
     <td>-</td>
     <td>'Fullscreen'</td>
   </tr>
-    </tbody>
+	</tbody>
 </table>
 
-<p><hr></p>
+<hr />
 
 <p><strong>PS:</strong></p>
 
 <p>We can import <a href="https://github.com/wenzhixin/bootstrap-table/tree/master/src/locale">all locale files</a> what you need:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bootstrap-table-en-US.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bootstrap-table-en-US.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bootstrap-table-zh-CN.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 ...
-</code></pre></div>
+</code></pre></div></div>
 
 <p>And then use JavaScript to switch locale:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="s1">'en-US'</span><span class="p">]);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="dl">'</span><span class="s1">en-US</span><span class="dl">'</span><span class="p">]);</span>
 <span class="c1">// $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);</span>
 <span class="c1">// ...</span>
-</code></pre></div>
+</code></pre></div></div>
 
 <p>Or use data attributes to set locale for table:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">data-toggle=</span><span class="s">"table"</span> <span class="na">data-locale=</span><span class="s">"en-US"</span><span class="nt">&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;table</span> <span class="na">data-toggle=</span><span class="s">"table"</span> <span class="na">data-locale=</span><span class="s">"en-US"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
-</code></pre></div>
+</code></pre></div></div>
 
 <p>Or use JavaScript to set locale for table:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'table'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">({</span><span class="na">locale</span><span class="p">:</span><span class="s1">'en-US'</span><span class="p">});</span>
-</code></pre></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">table</span><span class="dl">'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">({</span><span class="na">locale</span><span class="p">:</span><span class="dl">'</span><span class="s1">en-US</span><span class="dl">'</span><span class="p">});</span>
+</code></pre></div></div>
 
         </div>
         
@@ -2036,6 +2011,8 @@ function cellStyle(value, row, index, field) {
 
 <script src="../assets/js/sidenav.js?v=1.13.1"></script>
 <script src="../assets/js/common.js?v=1.13.1"></script>
+
+<script src="https://gg.wenzhixin.net.cn/wenzhixin/gg.js"></script>
 
   </body>
 </html>

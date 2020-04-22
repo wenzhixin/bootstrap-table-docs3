@@ -153,8 +153,7 @@
   margin: 0!important;
 }
 </style>
-<div id="codefund"><!-- fallback content --></div>
-<script src="https://codefund.io/properties/292/funder.js" async="async"></script>
+<div id="gg"></div>
 
           </div>
         </div>
@@ -208,18 +207,13 @@
              data-hs="h1,h2"
              data-smart-id="true"
              data-bottom=".bs-docs-footer">
-          <h1>Table options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/table-options.md"></a></h1>
+          <h1 id="table-options-">Table options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/table-options.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>Las opciones de la tabla están definidas en <code>jQuery.fn.bootstrapTable.defaults</code>.</p>
+<p>Las opciones de la tabla están definidas en <code class="highlighter-rouge">jQuery.fn.bootstrapTable.defaults</code>.</p>
 
-<table class="table"
-  id="t"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="t" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Nombre</th>
@@ -311,10 +305,10 @@
     <td>icons</td>
     <td>data-icons</td>
     <td>Object</td>
-    <td>{<br/>
-    &nbsp;&nbsp;refresh: 'glyphicon-refresh icon-refresh',<br/>
-    &nbsp;&nbsp;toggle: 'glyphicon-list-alt icon-list-alt',<br/>
-    &nbsp;&nbsp;columns: 'glyphicon-th icon-th'<br/>
+    <td>{<br />
+    &nbsp;&nbsp;refresh: 'glyphicon-refresh icon-refresh',<br />
+    &nbsp;&nbsp;toggle: 'glyphicon-list-alt icon-list-alt',<br />
+    &nbsp;&nbsp;columns: 'glyphicon-th icon-th'<br />
     }</td>
     <td>Define los iconos que son usados para los botones de refresh, toggle y columnas.</td>
   </tr>
@@ -378,13 +372,13 @@
     <td>queryParams</td>
     <td>data-query-params</td>
     <td>Function</td>
-    <td>function(params) {<br>return params;<br>}</td>
+    <td>function(params) {<br />return params;<br />}</td>
     <td>
     Cuando se solicita datos remotos, se debe enviar parámetros adicionales para modificar los queryParams.
-    Si queryParamsType = 'limit', el objecto params contiene: <br>
+    Si queryParamsType = 'limit', el objecto params contiene: <br />
     limit, offset, search, sort, order
-    Sino, el objeoto contiene: <br>
-    pageSize, pageNumber, searchText, sortName, sortOrder. <br>
+    Sino, el objeoto contiene: <br />
+    pageSize, pageNumber, searchText, sortName, sortOrder. <br />
     Retorna false para parar el request.
     </td>
   </tr>
@@ -399,9 +393,9 @@
     <td>responseHandler</td>
     <td>data-response-handler</td>
     <td>Function</td>
-    <td>function(res) {<br>return res;<br>}</td>
+    <td>function(res) {<br />return res;<br />}</td>
     <td>
-    Antes de cargar los datos remotos, manejar el formato de respuesta de los datos, el objecto parameters contiene: <br>
+    Antes de cargar los datos remotos, manejar el formato de respuesta de los datos, el objecto parameters contiene: <br />
     res: los datos devueltos.
     </td>
   </tr>
@@ -474,7 +468,7 @@
     <td>Boolean</td>
     <td>false</td>
     <td>Escapes a string for insertion into HTML,
-    replacing <code>&</code>, <code><</code>, <code>></code>,
+    replacing <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>,
     <code>"</code>, <code>`</code>, and <code>'</code> characters.</td>
   </tr>
   <tr>
@@ -498,7 +492,7 @@
     <td>false</td>
     <td>Habilita la busqueda exacta.</td>
   </tr>
-    <tr>
+	<tr>
     <td>searchText</td>
     <td>data-search-text</td>
     <td>String</td>
@@ -526,7 +520,7 @@
     <td>false</td>
     <td>True para mostrar el footer.</td>
   </tr>
-    <tr>
+	<tr>
     <td>showColumns</td>
     <td>data-show-columns</td>
     <td>Boolean</td>
@@ -600,7 +594,7 @@
     <td>detailFormatter</td>
     <td>data-detail-formatter</td>
     <td>Function</td>
-    <td>function(index, row) {<br>return '';<br>}</td>
+    <td>function(index, row) {<br />return '';<br />}</td>
     <td>Formatee su vista detalle cuando <code>detailView</code> está seteada en <code>true</code>.</td>
   </tr>
   <tr>
@@ -631,7 +625,7 @@
     <td>'bottom'</td>
     <td>Indica cómo alinear la paginación. Se puede usar: 'top', 'bottom', 'both' (coloca la paginación arriba y abajo de la tabla.</td>
   </tr>
-    <tr>
+	<tr>
     <td>paginationHAlign</td>
     <td>data-pagination-h-align</td>
     <td>String</td>
@@ -693,8 +687,8 @@
     <td>Function</td>
     <td><code>{ return $.inArray(element.tagName, ['A', 'BUTTON']); }</code></td>
     <td>
-    Takes one parameters:<br>
-    element: the element clicked on.<br>
+    Takes one parameters:<br />
+    element: the element clicked on.<br />
     Return true if the click should be ignored, false if the click should cause the row to be selected. This option is only relevant if clickToSelect is true.
     </td>
   </tr>
@@ -710,7 +704,7 @@
     <td>data-toolbar</td>
     <td>String</td>
     <td>undefined</td>
-    <td>Un selector jQuery que indica la barra de herramientas, por ejemplo:<br> #toolbar, .toolbar.</td>
+    <td>Un selector jQuery que indica la barra de herramientas, por ejemplo:<br /> #toolbar, .toolbar.</td>
   </tr>
   <tr>
     <td>buttonsToolbar</td>
@@ -718,7 +712,7 @@
     <td>String | Node</td>
     <td>undefined</td>
     <td>
-    Un selector jQuery que indica la barra de herramientas de botones, por ejemplo: <br>
+    Un selector jQuery que indica la barra de herramientas de botones, por ejemplo: <br />
         #buttons-toolbar, .buttons-toolbar, o un nodo DOM.
     </td>
   </tr>
@@ -756,9 +750,9 @@
     <td>Function</td>
     <td>{}</td>
     <td>
-    La función formatter para aplicar el estilo de la fila, toma dos parámetros: <br>
-    row: los datos de la fila.<br>
-    index: el índice de la fila.<br>
+    La función formatter para aplicar el estilo de la fila, toma dos parámetros: <br />
+    row: los datos de la fila.<br />
+    index: el índice de la fila.<br />
     Soporta clases y CSS.
     </td>
   </tr>
@@ -768,9 +762,9 @@
     <td>Function</td>
     <td>{}</td>
     <td>
-    La función formatter para los atributos de la fiila, toma dos parámetros: <br>
-    row: los datos de la fila.<br>
-    index: el índice de la fila.<br>
+    La función formatter para los atributos de la fiila, toma dos parámetros: <br />
+    row: los datos de la fila.<br />
+    index: el índice de la fila.<br />
     Soporta cualquier atributo customizable.
     </td>
   </tr>
@@ -780,9 +774,9 @@
       <td>Function</td>
       <td>$.noop</td>
       <td>
-      The custom search function is executed instead of built-in search function, takes one parameters: <br>
-      text: the search text.<br>
-      Example usage:<br>
+      The custom search function is executed instead of built-in search function, takes one parameters: <br />
+      text: the search text.<br />
+      Example usage:<br />
       <pre>
       function customSearch(text) {
         //Search logic here.
@@ -797,10 +791,10 @@
       <td>Function</td>
       <td>$.noop</td>
       <td>
-      The custom sort function is executed instead of built-in sort function, takes two parameters: <br>
-      sortName: the sort name.<br>
-      sortOrder: the sort order.<br>
-      Example usage:<br>
+      The custom sort function is executed instead of built-in sort function, takes two parameters: <br />
+      sortName: the sort name.<br />
+      sortOrder: the sort order.<br />
+      Example usage:<br />
       <pre>
       function customSort(sortName, sortOrder) {
         //Sort logic here.
@@ -812,18 +806,13 @@
   </tbody>
 </table>
 
-<h1>Column options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/column-options.md"></a></h1>
+<h1 id="column-options-">Column options <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/column-options.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>Las propiedades de la columna están definidas en <code>jQuery.fn.bootstrapTable.columnDefaults</code>.</p>
+<p>Las propiedades de la columna están definidas en <code class="highlighter-rouge">jQuery.fn.bootstrapTable.columnDefaults</code>.</p>
 
-<table class="table"
-  id="c"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="c" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Nombre</th>
@@ -904,7 +893,7 @@
     <td>undefined</td>
     <td>Indica cómo se alinea el encabezado de la tabla. Se puede usar 'left', 'right', 'center'.</td>
   </tr>
-    <tr>
+	<tr>
     <td>falign</td>
     <td>data-falign</td>
     <td>String</td>
@@ -924,7 +913,7 @@
     <td>Number {Pixeles o Porcentaje}</td>
     <td>undefined</td>
     <td>Indica el ancho de la columna. Si no es definido, el ancho será auto. Tmabién puede agregar '%' a su número y la bootstrapTable
-        usará la unidad de porcentaje, sino, puede agregar o no 'px' a su número para que bootstrapTable use pixeles.</td>
+		usará la unidad de porcentaje, sino, puede agregar o no 'px' a su número para que bootstrapTable use pixeles.</td>
   </tr>
   <tr>
     <td>sortable</td>
@@ -947,7 +936,7 @@
     <td>true</td>
     <td>False para ocultar el item de la columna.</td>
   </tr>
-    <tr>
+	<tr>
     <td>cardVisible</td>
     <td>data-card-visible</td>
     <td>Boolean</td>
@@ -974,33 +963,33 @@
     <td>Function</td>
     <td>undefined</td>
     <td>
-    El contexto (this) es el objecto columna. <br>
-    La función de formateo de la celda, toma tres parámetros: <br>
-    value: el valor del campo. <br>
-    row: los datos de la fila.<br>
+    El contexto (this) es el objecto columna. <br />
+    La función de formateo de la celda, toma tres parámetros: <br />
+    value: el valor del campo. <br />
+    row: los datos de la fila.<br />
     index: el indice de la fila.</td>
   </tr>
-    <tr>
+	<tr>
     <td>footerFormatter</td>
     <td>data-footer-formatter</td>
     <td>Function</td>
     <td>undefined</td>
     <td>
-    El contexto (this) es el objecto columna. <br>
-    La función toma un parámetro: <br>
-    data: Array de todas las filas. <br>
+    El contexto (this) es el objecto columna. <br />
+    La función toma un parámetro: <br />
+    data: Array de todas las filas. <br />
     La función debe retornar un string con el texto a mostrar en el footer.
-  </tr>
+  &lt;/tr&gt;
   <tr>
     <td>events</td>
     <td>data-events</td>
     <td>Object</td>
     <td>undefined</td>
     <td>
-    Los eventos de la celda son escuchados cuando se usa la función formatter, toma tres parámetros: <br>
-    event: el evento de jQuery. <br>
-    value: el valor del campo. <br>
-    row: los datos de la fila.<br>
+    Los eventos de la celda son escuchados cuando se usa la función formatter, toma tres parámetros: <br />
+    event: el evento de jQuery. <br />
+    value: el valor del campo. <br />
+    row: los datos de la fila.<br />
     index: el indice de la fila.</td>
   </tr>
   <tr>
@@ -1009,10 +998,10 @@
     <td>Function</td>
     <td>undefined</td>
     <td>
-    La función sort es usada para hacer el ordenamiendo customizable, toma dos parámetros: <br>
-    a: el primer valor del campo.<br>
-    b: el segundo valor del campo.<br>
-    rowA: la primera fila.<br>
+    La función sort es usada para hacer el ordenamiendo customizable, toma dos parámetros: <br />
+    a: el primer valor del campo.<br />
+    b: el segundo valor del campo.<br />
+    rowA: la primera fila.<br />
     rowB: la segunda fila.
     </td>
   </tr>
@@ -1032,11 +1021,11 @@
     <td>Function</td>
     <td>undefined</td>
     <td>
-    La función formatter para el estilo de la celda, toma tres parámetros: <br>
-    value: el valor del campo.<br>
-    row: los datos de la fila.<br>
-    index: el indice de la fila.<br>
-    field: la vico kampo.<br>
+    La función formatter para el estilo de la celda, toma tres parámetros: <br />
+    value: el valor del campo.<br />
+    row: los datos de la fila.<br />
+    index: el indice de la fila.<br />
+    field: la vico kampo.<br />
     Soporta clases o CSS.
     </td>
   </tr>
@@ -1062,7 +1051,7 @@
     <td>Boolean</td>
     <td>false</td>
     <td>
-    Escapes a string for insertion into HTML, replacing &, <, >, ", \`, and ' characters.
+    Escapes a string for insertion into HTML, replacing &amp;, &lt;, &gt;, ", \`, and ' characters.
     </td>
   </tr>
   <tr>
@@ -1074,19 +1063,15 @@
     True to show the title of column with 'radio' or 'singleSelect' 'checkbox' option.
     </td>
   </tr>
-  </tbody>
-</table>
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</td></tr></tbody></table>
 
-<h1>Events <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/events.md"></a></h1>
+<h1 id="events-">Events <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/events.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<table class="table"
-  id="e"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="e" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Evento</th>
@@ -1101,8 +1086,8 @@
     <td>all.bs.table</td>
     <td>name, args</td>
     <td>
-    Se ejecuta cuando todos los eventos son llamados, los parámetros contienen: <br>
-    name: nombre del evento, <br>
+    Se ejecuta cuando todos los eventos son llamados, los parámetros contienen: <br />
+    name: nombre del evento, <br />
     args: datos del evento.</td>
   </tr>
   <tr>
@@ -1110,9 +1095,9 @@
     <td>click-row.bs.table</td>
     <td>row, $element</td>
     <td>
-    Se ejecuta cuando el usuario le da click a una fila, los parámetros contienen: <br>
-    row: el registro que corresponde con la fila a la que se le dio click, <br>
-    $element: el elemento tr, <br>
+    Se ejecuta cuando el usuario le da click a una fila, los parámetros contienen: <br />
+    row: el registro que corresponde con la fila a la que se le dio click, <br />
+    $element: el elemento tr, <br />
     field: el nombre del campo correspondiente a la celda hecho clic.
     </td>
   </tr>
@@ -1121,9 +1106,9 @@
     <td>dbl-click-row.bs.table</td>
     <td>row, $element</td>
     <td>
-    Se ejecuta cuando el usuario le da click a una fila, los parámetros contienen: <br>
-    row: el registro que corresponde con la fila a la que se le dio click, <br>
-    $element: el elemento tr, <br>
+    Se ejecuta cuando el usuario le da click a una fila, los parámetros contienen: <br />
+    row: el registro que corresponde con la fila a la que se le dio click, <br />
+    $element: el elemento tr, <br />
     field: el nombre del campo correspondiente a la celda hecho clic.
     </td>
   </tr>
@@ -1132,10 +1117,10 @@
     <td>click-cell.bs.table</td>
     <td>field, value, row, $element</td>
     <td>
-    Se ejecuta cuando el usuario le da click a una celda de la tabla, los parámetros contienen: <br>
-    field: el nombre del campo correspondiente a la celda hecho clic, <br>
-    value: el valor de datos correspondiente a la celda hecho clic, <br>
-    row: el registro que corresponde con la fila a la que se le dio click, <br>
+    Se ejecuta cuando el usuario le da click a una celda de la tabla, los parámetros contienen: <br />
+    field: el nombre del campo correspondiente a la celda hecho clic, <br />
+    value: el valor de datos correspondiente a la celda hecho clic, <br />
+    row: el registro que corresponde con la fila a la que se le dio click, <br />
     $element: el elemento td.
     </td>
   </tr>
@@ -1144,10 +1129,10 @@
     <td>dbl-click-cell.bs.table</td>
     <td>field, value, row, $element</td>
     <td>
-    Se ejecuta cuando el usuario le da click a una celda de la tabla, los parámetros contienen: <br>
-    field: el nombre del campo correspondiente a la celda hecho clic, <br>
-    value: el valor de datos correspondiente a la celda hecho clic, <br>
-    row: el registro que corresponde con la fila a la que se le dio click, <br>
+    Se ejecuta cuando el usuario le da click a una celda de la tabla, los parámetros contienen: <br />
+    field: el nombre del campo correspondiente a la celda hecho clic, <br />
+    value: el valor de datos correspondiente a la celda hecho clic, <br />
+    row: el registro que corresponde con la fila a la que se le dio click, <br />
     $element: el elemento td.
     </td>
   </tr>
@@ -1156,8 +1141,8 @@
     <td>sort.bs.table</td>
     <td>name, order</td>
     <td>
-    Se ejecuta cuando el usuario orderna una columna, los parámetros contienen: <br>
-    name: el nombre de la columna del campo ordenado<br>
+    Se ejecuta cuando el usuario orderna una columna, los parámetros contienen: <br />
+    name: el nombre de la columna del campo ordenado<br />
     order: el orden utilizado.
     </td>
   </tr>
@@ -1166,7 +1151,7 @@
     <td>check.bs.table</td>
     <td>row</td>
     <td>
-    Se ejecuta cuando el usuario chequea una fila, los parámetros contienen: <br>
+    Se ejecuta cuando el usuario chequea una fila, los parámetros contienen: <br />
     row: el registro que corresponde a la fila chequeada.
     $element: el elemento DOM chequeado.
     </td>
@@ -1176,7 +1161,7 @@
     <td>uncheck.bs.table</td>
     <td>row</td>
     <td>
-    Se ejecuta cuando el usuario des-chequea una fila, los parámetros contienen: <br>
+    Se ejecuta cuando el usuario des-chequea una fila, los parámetros contienen: <br />
     row: el registro que corresponde a la fila deschequeada.
     $element: el elemento DOM deschequeado.
     </td>
@@ -1185,14 +1170,14 @@
     <td>onCheckAll</td>
     <td>check-all.bs.table</td>
     <td>rows</td>
-    <td>Se ejecuta cuando el usuario chequea todas las filas, los parámetros contienen: <br>
+    <td>Se ejecuta cuando el usuario chequea todas las filas, los parámetros contienen: <br />
     rows: arreglo de las filas chequeadas.</td>
   </tr>
   <tr>
     <td>onUncheckAll</td>
     <td>uncheck-all.bs.table</td>
     <td>rows</td>
-    <td>Se ejecuta cuando el usuario des-chequea todas las filas, los parámetros contienen: <br>
+    <td>Se ejecuta cuando el usuario des-chequea todas las filas, los parámetros contienen: <br />
     rows: arreglo de las filas deschequeadas.</td>
   </tr>
   <tr>
@@ -1200,7 +1185,7 @@
     <td>check-some.bs.table</td>
     <td>rows</td>
     <td>
-    Se ejecuta cuando el usuario chequea algunas filas, los parámetros contienen: <br>
+    Se ejecuta cuando el usuario chequea algunas filas, los parámetros contienen: <br />
     rows: arreglo de las filas chequeadas.
     </td>
   </tr>
@@ -1209,7 +1194,7 @@
     <td>uncheck-some.bs.table</td>
     <td>rows</td>
     <td>
-    Se ejecuta cuando el usuario deschequea algunas filas, los parámetros contienen: <br>
+    Se ejecuta cuando el usuario deschequea algunas filas, los parámetros contienen: <br />
     rows: arreglo de las filas deschequeadas.
     </td>
   </tr>
@@ -1261,7 +1246,7 @@
     <td>none</td>
     <td>Se ejecuta después de que el cuerpo/contenido de la tabla es renderizado y es disponible en el DOM</td>
   </tr>
-    <tr>
+	<tr>
      <td>onPostHeader</td>
      <td>post-header.bs.table</td>
      <td>none</td>
@@ -1300,18 +1285,13 @@
   </tbody>
 </table>
 
-<h1>Methods <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/methods.md"></a></h1>
+<h1 id="methods-">Methods <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/methods.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>Sintaxis para llamar a un método: <code>$(&#39;#table&#39;).bootstrapTable(&#39;method&#39;, parameter)</code>.</p>
+<p>Sintaxis para llamar a un método: <code class="highlighter-rouge">$('#table').bootstrapTable('method', parameter)</code>.</p>
 
-<table class="table"
-  id="m"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="m" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Nombre</th>
@@ -1339,7 +1319,7 @@
     <td>getRowByUniqueId</td>
     <td>id</td>
     <td>
-    Se obtiene el dato de la tabla que contiene el id pasado por parámetro<br>
+    Se obtiene el dato de la tabla que contiene el id pasado por parámetro<br />
     Ejemplo: $('#myTable').bootstrapTable('getRowByUniqueId', "122")
     </td>
   </tr>
@@ -1365,7 +1345,7 @@
     <td>data</td>
     <td>Se anexan los datos a la tabla.</td>
   </tr>
-    <tr>
+	<tr>
     <td>prepend</td>
     <td>data</td>
     <td>Se antepone los datos a la tabla.</td>
@@ -1374,9 +1354,9 @@
     <td>remove</td>
     <td>params</td>
     <td>
-    Se remueven los datos de la tabla, los parámetros contienen dos propiedades: <br>
-    field: el nombre del campo de las filas removidas. <br>
-    values: el array de valores de las filas que deberían ser removidas. <br>
+    Se remueven los datos de la tabla, los parámetros contienen dos propiedades: <br />
+    field: el nombre del campo de las filas removidas. <br />
+    values: el array de valores de las filas que deberían ser removidas. <br />
     Ejemplo: $('#myTable').bootstrapTable('remove', {field: 'id', values: ["73", "74"]})
     </td>
   </tr>
@@ -1384,7 +1364,7 @@
     <td>removeAll</td>
     <td>-</td>
     <td>
-    Se remueven todos los datos de la tabla <br>
+    Se remueven todos los datos de la tabla <br />
     Ejemplo: $('#myTable').bootstrapTable('removeAll')
     </td>
   </tr>
@@ -1392,7 +1372,7 @@
     <td>removeByUniqueId</td>
     <td>id</td>
     <td>
-    Se remueve el dato de la tabla que contiene el id pasado por parámetro<br>
+    Se remueve el dato de la tabla que contiene el id pasado por parámetro<br />
     Ejemplo: $('#myTable').bootstrapTable('removeByUniqueId', "122")
     </td>
   </tr>
@@ -1400,8 +1380,8 @@
     <td>insertRow</td>
     <td>params</td>
     <td>
-    Inserta una nueva fila, los paeámetros contienen las siguientes propiedades:<br>
-    index: el índice donde se insertara la nueva fila.<br>
+    Inserta una nueva fila, los paeámetros contienen las siguientes propiedades:<br />
+    index: el índice donde se insertara la nueva fila.<br />
     row: los datos de la fila.
     </td>
   </tr>
@@ -1409,22 +1389,22 @@
     <td>updateRow</td>
     <td>params</td>
     <td>
-    Actualiza la fila especificada, el parámetro contiene las siguientes propiedades: <br>
-    index: el índice de la fila para ser actualizada. <br>
+    Actualiza la fila especificada, el parámetro contiene las siguientes propiedades: <br />
+    index: el índice de la fila para ser actualizada. <br />
     row: los nuevos data de la fila.
     </td>
   </tr>
-    <tr>
+	<tr>
     <td>showRow</td>
     <td>params</td>
-    <td>Muesta la fila especificada. El parámetro contiene los siguiente propiedades: <br>
+    <td>Muesta la fila especificada. El parámetro contiene los siguiente propiedades: <br />
     index: el indice o idField de la fila.
     isIdField: Boolean que indica si el index es idField o la posición de la fila.</td>
   </tr>
   <tr>
     <td>hideRow</td>
     <td>params</td>
-    <td>Oculta la fila especificada. El parámetro contiene los siguiente propiedades: <br>
+    <td>Oculta la fila especificada. El parámetro contiene los siguiente propiedades: <br />
     index: el indice o idField de la fila.
     isIdField: Boolean que indica si el index es idField o la posición de la fila.</td>
   </tr>
@@ -1438,10 +1418,10 @@
     <td>mergeCells</td>
     <td>options</td>
     <td>
-    Se unen algunas celdas en una, las opciones contienen las siguientes propiedades: <br>
-    index: el índice de la fila. <br>
-    field: el nombre del campo.<br>
-    rowspan: el rowspan para ser unidas. <br>
+    Se unen algunas celdas en una, las opciones contienen las siguientes propiedades: <br />
+    index: el índice de la fila. <br />
+    field: el nombre del campo.<br />
+    rowspan: el rowspan para ser unidas. <br />
     colspan: el colspan para ser unidas.
     </td>
   </tr>
@@ -1449,10 +1429,10 @@
     <td>updateCell</td>
     <td>params</td>
     <td>
-    Actualiza una celda, los parámetros contienen: <br>
-    rowIndex: índice de la fila. <br>
-    fieldName: el nombre del campo.<br>
-    fieldValue: el nuevo valor de la celda. <br>
+    Actualiza una celda, los parámetros contienen: <br />
+    rowIndex: índice de la fila. <br />
+    fieldName: el nombre del campo.<br />
+    fieldValue: el nuevo valor de la celda. <br />
     </td>
   </tr>
   <tr>
@@ -1500,14 +1480,14 @@
     <td>index</td>
     <td>Des-chequea una fila, el índice de la fila inicia en 0.</td>
   </tr>
-    <tr>
+	<tr>
     <td>checkBy</td>
     <td>params</td>
     <td>
-    Chequea una fila por un array de valores los parámetros continen:<br>
-    field: nombre del campo a usar para encontrar los registros<br>
-    values: array de valores de las filas por chequear<br>
-    Ejemplo: <br>
+    Chequea una fila por un array de valores los parámetros continen:<br />
+    field: nombre del campo a usar para encontrar los registros<br />
+    values: array de valores de las filas por chequear<br />
+    Ejemplo: <br />
     $("#table").bootstrapTable("checkBy", {field:"field_name", values:["value1","value2","value3"]})
     </td>
   </tr>
@@ -1515,10 +1495,10 @@
     <td>uncheckBy</td>
     <td>params</td>
     <td>
-    Deschequea una fila por un array de valores los parámetros continen:<br>
-    field: nombre del campo a usar para encontrar los registros<br>
-    values: array de valores de las filas por deschequear<br>
-    Ejemplo: <br>
+    Deschequea una fila por un array de valores los parámetros continen:<br />
+    field: nombre del campo a usar para encontrar los registros<br />
+    values: array de valores de las filas por deschequear<br />
+    Ejemplo: <br />
     $("#table").bootstrapTable("uncheckBy", {field:"field_name", values:["value1","value2","value3"]})
     </td>
   </tr>
@@ -1582,7 +1562,7 @@
     <td>none</td>
     <td>Ir a la siguiente página.</td>
   </tr>
-    <tr>
+	<tr>
     <td>togglePagination</td>
     <td>none</td>
     <td>Habilita y deshabilita la paginación.</td>
@@ -1615,16 +1595,11 @@
   </tbody>
 </table>
 
-<h1>Localizations <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/localizations.md"></a></h1>
+<h1 id="localizations-">Localizations <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/documentation/localizations.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<table class="table"
-  id="l"
-  data-search="true"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-mobile-responsive="true">
+<table class="table" id="l" data-search="true" data-show-toggle="true" data-show-columns="true" data-mobile-responsive="true">
   <thead>
   <tr>
     <th>Nombre</th>
@@ -1678,47 +1653,52 @@
     <td>-</td>
     <td>'Columns'</td>
   </tr>
-    <tr>
+	<tr>
     <td>formatAllRows</td>
-    <td>--/td>
+    <td>--/td&gt;
     <td>'All'</td>
-  </tr>
+  &lt;/tr&gt;
   <tr>
     <td>formatFullscreen</td>
     <td>-</td>
     <td>'Fullscreen'</td>
   </tr>
-  </tbody>
-</table>
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-<p><hr></p>
+---
 
-<p><strong>PS:</strong></p>
+**PS:**
 
-<p>Podemos importar  <a href="https://github.com/wenzhixin/bootstrap-table/tree/master/src/locale">all locale files</a> lo que necesita:</p>
+Podemos importar  [all locale files](https://github.com/wenzhixin/bootstrap-table/tree/master/src/locale) lo que necesita:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bootstrap-table-en-US.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"bootstrap-table-zh-CN.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+```html
+<script src="bootstrap-table-en-US.js"></script>
+<script src="bootstrap-table-zh-CN.js"></script>
 ...
-</code></pre></div>
+```
 
-<p>Y luego utilice este código JavaScript para cambiar el lenguaje:</p>
+Y luego utilice este código JavaScript para cambiar el lenguaje:
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="s1">'en-US'</span><span class="p">]);</span>
-<span class="c1">// $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);</span>
-<span class="c1">// ...</span>
-</code></pre></div>
+```js
+$.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['en-US']);
+// $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
+// ...
+```
 
-<p>O utilice los data attributes para configurar el lenguaje:</p>
+O utilice los data attributes para configurar el lenguaje:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">data-toggle=</span><span class="s">"table"</span> <span class="na">data-locale=</span><span class="s">"en-US"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-</code></pre></div>
+```html
+<table data-toggle="table" data-locale="en-US">
+</table>
+```
 
-<p>O utilice este JavaScript para configurar el lenguaje:</p>
+O utilice este JavaScript para configurar el lenguaje:
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'table'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">({</span><span class="na">locale</span><span class="p">:</span><span class="s1">'en-US'</span><span class="p">});</span>
-</code></pre></div>
+```js
+$('table').bootstrapTable({locale:'en-US'});
+```
+</td></tr></tbody></table>
 
         </div>
         
@@ -1804,6 +1784,8 @@
 
 <script src="../assets/js/sidenav.js?v=1.13.1"></script>
 <script src="../assets/js/common.js?v=1.13.1"></script>
+
+<script src="https://gg.wenzhixin.net.cn/wenzhixin/gg.js"></script>
 
   </body>
 </html>

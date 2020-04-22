@@ -153,8 +153,7 @@
   margin: 0!important;
 }
 </style>
-<div id="codefund"><!-- fallback content --></div>
-<script src="https://codefund.io/properties/292/funder.js" async="async"></script>
+<div id="gg"></div>
 
           </div>
         </div>
@@ -208,61 +207,62 @@
              data-hs="h1,h2"
              data-smart-id="true"
              data-bottom=".bs-docs-footer">
-          <h1>FAQ <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/faq/faq.md"></a></h1>
+          <h1 id="faq-">FAQ <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/es/faq/faq.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<h3>Cuando cambio el tamaño de la ventana del explorador, el encabezado de la tabla no se ajusta automáticamente, ¿cómo se soluciona?</h3>
+<h3 id="cuando-cambio-el-tamaño-de-la-ventana-del-explorador-el-encabezado-de-la-tabla-no-se-ajusta-automáticamente-cómo-se-soluciona">Cuando cambio el tamaño de la ventana del explorador, el encabezado de la tabla no se ajusta automáticamente, ¿cómo se soluciona?</h3>
 
-<p>Cuando setee la propiedad <code>height</code> de bootstrap table, automáticamente la propiedad<code>fixed header</code> es habilitada, eso causa el problema, se necesita escuchar el evento <code>resize</code> de la vantana del explorador y usar el método <code>resetView</code> para resolver este problema, ejemplo:</p>
+<p>Cuando setee la propiedad <code class="highlighter-rouge">height</code> de bootstrap table, automáticamente la propiedad<code class="highlighter-rouge">fixed header</code> es habilitada, eso causa el problema, se necesita escuchar el evento <code class="highlighter-rouge">resize</code> de la vantana del explorador y usar el método <code class="highlighter-rouge">resetView</code> para resolver este problema, ejemplo:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'#tableId'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">()</span> <span class="c1">// init via javascript</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tableId</span><span class="dl">'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">()</span> <span class="c1">// init via javascript</span>
 
   <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">resize</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#tableId'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="s1">'resetView'</span><span class="p">)</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tableId</span><span class="dl">'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">resetView</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">})</span>
 <span class="p">})</span>
-</code></pre></div>
+</code></pre></div></div>
 
-<p><hr></p>
+<hr />
 
-<h3>¿Cuál es la mejor opción para unir celdas?</h3>
+<h3 id="cuál-es-la-mejor-opción-para-unir-celdas">¿Cuál es la mejor opción para unir celdas?</h3>
 
 <p>Para unir celdas, cuando se haga el refresh, se pase a la siguiente página o se muestren/oculten columnas, las celdas unidas se quedarán es su estado normal, no unidas. Se puede escuchar los eventos(on load success, on column switch, on page change y on search) para resolver este problema, ejemplo:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$table</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'load-success.bs.table column-switch.bs.table page-change.bs.table search.bs.table'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$table</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="s1">'mergeCells'</span><span class="p">,</span> <span class="p">{...})</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$table</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">load-success.bs.table column-switch.bs.table page-change.bs.table search.bs.table</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$table</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">mergeCells</span><span class="dl">'</span><span class="p">,</span> <span class="p">{...})</span>
 <span class="p">})</span>
-</code></pre></div>
+</code></pre></div></div>
 
-<p><hr></p>
+<hr />
 
-<h3>Is event parameter put in the wrong order?</h3>
+<h3 id="is-event-parameter-put-in-the-wrong-order">Is event parameter put in the wrong order?</h3>
 
 <p>When you use like this:</p>
 
-<div class="highlight"><pre><code class="language-" data-lang="">$('#eventsTable').on('click-row.bs.table', function (event, row, $element) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#eventsTable').on('click-row.bs.table', function (event, row, $element) {
 
 })
-</code></pre></div>
+</code></pre></div></div>
 
-<p>the first parameter is always <code>event</code>: <a href="http://jsfiddle.net/wenyi/e3nk137y/11688/">http://jsfiddle.net/wenyi/e3nk137y/11688/</a></p>
+<p>the first parameter is always <code class="highlighter-rouge">event</code>: http://jsfiddle.net/wenyi/e3nk137y/11688/</p>
 
 <p>and use onClickRow event:</p>
 
-<div class="highlight"><pre><code class="language-" data-lang="">onClickRow: function (row, $element) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>onClickRow: function (row, $element) {
 
 }
-</code></pre></div>
+</code></pre></div></div>
 
-<p><hr></p>
+<hr />
 
-<h3>How can I support development of bootstrap-table?</h3>
+<h3 id="how-can-i-support-development-of-bootstrap-table">How can I support development of bootstrap-table?</h3>
 
 <p>All your ideas and feedback are very appreciated! Please feel free to open issues on GitHub or send me email.</p>
 
-<p>I&#39;m also grateful for your donations: <a href="/donate">Donate</a></p>
+<p>I’m also grateful for your donations: <a href="/donate">Donate</a></p>
+
 
         </div>
         
@@ -348,6 +348,8 @@
 
 <script src="../assets/js/sidenav.js?v=1.13.1"></script>
 <script src="../assets/js/common.js?v=1.13.1"></script>
+
+<script src="https://gg.wenzhixin.net.cn/wenzhixin/gg.js"></script>
 
   </body>
 </html>

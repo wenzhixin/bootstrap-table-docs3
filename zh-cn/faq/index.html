@@ -153,8 +153,7 @@
   margin: 0!important;
 }
 </style>
-<div id="codefund"><!-- fallback content --></div>
-<script src="https://codefund.io/properties/292/funder.js" async="async"></script>
+<div id="gg"></div>
 
           </div>
         </div>
@@ -208,59 +207,60 @@
              data-hs="h1,h2"
              data-smart-id="true"
              data-bottom=".bs-docs-footer">
-          <h1>常见问题 <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/zh-cn/faq/faq.md"></a></h1>
+          <h1 id="常见问题-">常见问题 <a href="https://github.com/wenzhixin/bootstrap-table/blob/develop/docs/_i18n/zh-cn/faq/faq.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<h3>当浏览器窗口变化是，表头与表格不对齐，应该怎么办？</h3>
+<h3 id="当浏览器窗口变化是表头与表格不对齐应该怎么办">当浏览器窗口变化是，表头与表格不对齐，应该怎么办？</h3>
 
-<p>当你使用 <code>height</code> 参数的时候，会启用 <code>固定表头</code> 的功能，这个功能会导致不对齐的问题，你可以通过监听 <code>resize</code> 事件来解决问题，代码如下：</p>
+<p>当你使用 <code class="highlighter-rouge">height</code> 参数的时候，会启用 <code class="highlighter-rouge">固定表头</code> 的功能，这个功能会导致不对齐的问题，你可以通过监听 <code class="highlighter-rouge">resize</code> 事件来解决问题，代码如下：</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'#tableId'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">()</span> <span class="c1">// init via javascript</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tableId</span><span class="dl">'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">()</span> <span class="c1">// init via javascript</span>
 
   <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">resize</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#tableId'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="s1">'resetView'</span><span class="p">)</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tableId</span><span class="dl">'</span><span class="p">).</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">resetView</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">})</span>
 <span class="p">})</span>
-</code></pre></div>
+</code></pre></div></div>
 
-<p><hr></p>
+<hr />
 
-<h3>如何更好的合并表格列？</h3>
+<h3 id="如何更好的合并表格列">如何更好的合并表格列？</h3>
 
 <p>对于合并的表格，当你使用刷新，点击下一页或者切换列的显示，合并的表格会变回去，我们可以监听一下的事件来解决这个问题，代码如下：</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$table</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'load-success.bs.table column-switch.bs.table page-change.bs.table search.bs.table'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$table</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="s1">'mergeCells'</span><span class="p">,</span> <span class="p">{...})</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$table</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">load-success.bs.table column-switch.bs.table page-change.bs.table search.bs.table</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$table</span><span class="p">.</span><span class="nx">bootstrapTable</span><span class="p">(</span><span class="dl">'</span><span class="s1">mergeCells</span><span class="dl">'</span><span class="p">,</span> <span class="p">{...})</span>
 <span class="p">})</span>
-</code></pre></div>
+</code></pre></div></div>
 
-<p><hr></p>
+<hr />
 
-<h3>事件参数位置错误？</h3>
+<h3 id="事件参数位置错误">事件参数位置错误？</h3>
 
 <p>当你使用：</p>
 
-<div class="highlight"><pre><code class="language-" data-lang="">$('#eventsTable').on('click-row.bs.table', function (event, row, $element) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#eventsTable').on('click-row.bs.table', function (event, row, $element) {
 
 })
-</code></pre></div>
+</code></pre></div></div>
 
-<p>的时候，第一个参数总是 <code>event</code>：<a href="http://jsfiddle.net/wenyi/e3nk137y/11688/">http://jsfiddle.net/wenyi/e3nk137y/11688/</a></p>
+<p>的时候，第一个参数总是 <code class="highlighter-rouge">event</code>：http://jsfiddle.net/wenyi/e3nk137y/11688/</p>
 
-<p>而使用 <code>onClickRow</code> 就正常:</p>
+<p>而使用 <code class="highlighter-rouge">onClickRow</code> 就正常:</p>
 
-<div class="highlight"><pre><code class="language-" data-lang="">onClickRow: function (row, $element) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>onClickRow: function (row, $element) {
 
 }
-</code></pre></div>
+</code></pre></div></div>
 
-<h3>我要如何支持 Bootstrap Table 的开发？</h3>
+<h3 id="我要如何支持-bootstrap-table-的开发">我要如何支持 Bootstrap Table 的开发？</h3>
 
 <p>非常感谢你的想法和建议，你可以到 GitHub 上提 issue 或者发邮件给我。</p>
 
 <p>当然，假如你也可以 <a href="/donate">捐助</a> 我们的项目。</p>
+
 
         </div>
         
@@ -347,6 +347,8 @@
 
 <script src="../assets/js/sidenav.js?v=1.13.1"></script>
 <script src="../assets/js/common.js?v=1.13.1"></script>
+
+<script src="https://gg.wenzhixin.net.cn/wenzhixin/gg.js"></script>
 
   </body>
 </html>
